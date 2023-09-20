@@ -25,6 +25,8 @@ jobs:
           echo "hello" > some.txt
 
       - name: Commit and push changes
+        env:
+          PAT_TOKEN: "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"
         run: |
           git config --global user.name "bhuvanp777"
           git config --global user.email "bhuvan.p@amberstudent.com"
