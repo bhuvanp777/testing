@@ -21,6 +21,8 @@ jobs:
         run: |
           # Add your Python script execution command here
           python sample.py
+          touch some.txt
+          echo "hello" > some.txt
 
       - name: Commit and push changes
         run: |
