@@ -33,4 +33,5 @@ jobs:
 
           git add .
           git commit -m "Update the repository"
+          git remote set-url origin "https://github.com/bhuvanp777/testing.git"
           git push origin HEAD
