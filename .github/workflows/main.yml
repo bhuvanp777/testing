@@ -26,7 +26,7 @@ jobs:
 
       - name: Commit and push changes
         env:
-          PAT_TOKEN: "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"
+          PAT_TOKEN: "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"
         run: |
           git config --global user.name "bhuvanp777"
           git config --global user.email "bhuvan.p@amberstudent.com"
