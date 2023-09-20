@@ -16,22 +16,22 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-
+      - uses: actions/labeler@v4
+        with:
+          repo-token: "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"
       - name: Run Python script
         run: |
           # Add your Python script execution command here
           python sample.py
           touch some.txt
           echo "hello" > some.txt
-
+      
       - name: Commit and push changes
-        env:
-          PAT_TOKEN: "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"
         run: |
           git config --global user.name "bhuvanp777"
           git config --global user.email "bhuvan.p@amberstudent.com"
 
           git add .
           git commit -m "Update the repository"
-          git remote set-url origin "https://github.com/bhuvanp777/testing.git"
+          git push
           git push origin HEAD
