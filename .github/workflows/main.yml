@@ -23,14 +23,11 @@ jobs:
         run: |
           # Add your Python script execution command here
           python sample.py
-          touch some.txt
-          echo "hello" > some.txt
+          touch somee.txt
+          echo "hello" > somee.txt
       
       - name: Commit and push changes
         run: |
-          git config --global user.name "bhuvanp777"
-          git config --global user.email "bhuvan.p@amberstudent.com"
-
           git add .
           git commit -m "Update the repository"
           git push
