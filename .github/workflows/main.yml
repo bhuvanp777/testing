@@ -1,0 +1,32 @@
+name: Weekly Workflow
+
+on:
+  workflow_dispatch:
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Run Python script
+        run: |
+          # Add your Python script execution command here
+          python sample.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "bhuvanp777"
+          git config --global user.email "bhuvan.p@amberstudent.com"
+
+          git add .
+          git commit -m "Update the repository"
+          git push origin HEAD
